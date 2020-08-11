@@ -1,0 +1,229 @@
+/*
+a. Chenghai Cao
+b. Chenghai_cao@student.uml.edu
+c. Chenghai Cao is learning in Umass Lowell undergrad student, Computer Science Major, this is Chenghai Cao's homework 7 in 91.61 GUI Programming I as a student.
+d. Aug/07/2020
+e. This webpage is mainly displays an Interactive Dynamic Table by using the jQuery UI Slider and Tab Widgets.
+
+Copyright (c) 2020 by Chenghai Cao. All rights reserved.
+*/
+
+html {
+    background: url("../img/bg.jpg");
+    width:100%;
+    height:100%;
+    background-size:100% 120%;
+}
+
+
+fieldset {
+    border: 1px solid #000000;
+    padding: 10px 20px 15px 20px;
+    margin: 0;
+}
+
+body {
+    background-color: rgba(0,100,100,0.4);
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    max-width: 860px;
+    min-height: 100%;
+    min-width: 590px;
+    padding: 20px;
+    width: 80%;
+}
+
+h1 {
+  text-align: center;
+  color: lightblue;
+}
+
+h2{
+  text-align: center;
+  color: lightblue;
+}
+
+legend{
+  text-align: center;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+html {
+    font-style:  normal;
+    font-family: arial;
+    font-size: 20px;
+    color: white;
+}
+
+body{
+    font-style:  normal;
+    font-family: arial;
+    font-size: 16px;
+    color: white;
+}
+
+input{
+  color: black;
+}
+
+p{
+  color: darkorange;
+  text-align: left;
+  border: 1px;
+  font-size: 20px;
+  font-family: cursive;
+
+}
+
+#form label:not(.error){
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    text-align: right;
+}
+
+#table {
+  text-align: center;
+  background-color: #ffffff;
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+}
+
+/*color in the cell to interactive the white-off-blue color*/
+#table tr:nth-child(odd) td:nth-child(even) {
+    background-color: #99C3EA;
+}
+
+#table tr:nth-child(even) td:nth-child(odd){
+      background-color: #99C3EA;
+}
+/**********************************************************/
+#table td {
+  border: #ffffff 5px solid;
+  padding: 10px;
+}
+
+#table th{
+  color: white;
+  background-color: #183332;
+  border: #ffffff 5px solid;
+  padding: 10px;
+}
+
+#form fieldset {
+    border: 2px solid rgba(100,50,0,0.3);
+    margin-bottom: 20px;
+    padding: 10px 20px 20px 20px;
+    box-shadow: 5px 10px rgba(50,50,0,0.3);
+}
+
+#form legend {
+    font-weight: bold;
+    text-align: center;
+}
+
+#form input[type='number'] {
+    width: 130px;
+    font-size: 120%;
+    font-family: monospace;
+    margin-right: 20px;
+}
+
+
+#form input[type='submit'] {
+    text-align: center;
+    background-color: rgba(50,0,50,0.7);
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    min-width: 300px;
+    max-width: 1000px;
+    color: lightblue;
+
+}
+#form .ui-slider {
+    border: 1px solid pink;
+    height: 4px;
+    margin: 15px 15px;
+}
+
+#form .ui-slider .ui-slider-handle {
+    top: -10px;
+    margin-left: -20px;
+    width: 20px;
+    height: 24px;
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: pink;
+    background-image: none;
+}
+
+#form .dynamicTab {
+    display: inline-block;
+    float: right;
+    padding: 10px;
+}
+
+#tabButtons {
+    margin: 20px 0;
+}
+
+
+
+#tableTabs {
+    border: 1px solid #ffffff;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#tableTabs .ui-tabs-nav {
+    border-radius: 0;
+    background-image: none;
+    background-color: rgba(0,50,100,0.2);
+    border: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    font-size: 0.8em;
+}
+
+#tableTabs .ui-tabs-tab {
+
+    border-radius: 0;
+    border: 0;
+    background-color: lightblue;
+    background-image: none;
+    display: inline-block;
+    float: none;
+    vertical-align: bottom;
+    border-bottom: 1px solid #000000;
+}
+#tableTabs .ui-tabs-active {
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+#tableTabs .tabClose {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+#tableTabs .ui-tabs-panel {
+    height: 500px;
+    padding: 0;
+    overflow: auto;
+    flex-grow: 1;
+}
+.hidden {
+    display: none !important;
+}
+.ui-widget {
+    border-radius: 0;
+}

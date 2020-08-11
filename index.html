@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<!--
+a. Chenghai Cao
+b. Chenghai_cao@student.uml.edu
+c. Chenghai Cao is learning in Umass Lowell undergrad student, Computer Science Major, this is Chenghai Cao's homework 7 in 91.61 GUI Programming I as a student.
+d. Aug/07/2020
+e. This webpage is mainly displays an Interactive Dynamic Table by using the jQuery UI Slider and Tab Widgets.
+
+Copyright (c) 2020 by Chenghai Cao. All rights reserved.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js" defer></script>
+    <script src="js/table.js" defer></script>
+  </head>
+  <body>
+    <h1>Homework 7: Using the jQuery UI Slider and Tab Widgets with Interactive Dynamic Table</h1>
+    <h1>(single page web app)</h1>
+    <br>
+    <form id="form" novalidate>
+        <fieldset>
+          <legend>Field to Input Rows Number</legend>
+          <div>
+            <label for="rowm">Start from:</label>
+            <input type="number" id="rowm" name="rowm" placeholder="Input Here" min="-50" max="50" autocomplete="off">
+            <div id="multiplierMinSlider" class="slider"></div>
+            <div style='float:left'>-50</div><div style='float:right'>50</div>
+            <br>
+          </div>
+            <br>
+          <div>
+            <label for="rowM">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End at:</label>
+            <input type="number" id="rowM" name="rowM" placeholder="Input Here" min="-50" max="50" autocomplete="off">
+            <div id="multiplierMaxSlider" class="slider"></div>
+            <div style='float:left'>-50</div><div style='float:right'>50</div>
+            <br>
+          </div>
+          <br>
+          <div id="rowError" class="error hidden"></div>
+        </fieldset>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Field to Input Columns Number</legend>
+            <div>
+              <label for="colm">Start from:</label>
+              <input type="number" id="colm" name="colm" placeholder="Input Here" min="-50" max="50" autocomplete="off">
+              <div id="multiplicandMinSlider" class="slider"></div>
+              <div style='float:left'>-50</div><div style='float:right'>50</div>
+              <br>
+            </div>
+            <br>
+            <div>
+              <label for="colM">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End at:</label>
+              <input type="number" id="colM" name="colM" placeholder="Input Here" min="-50" max="50" autocomplete="off">
+              <div id="multiplicandMaxSlider" class="slider"></div>
+              <div style='float:left'>-50</div><div style='float:right'>50</div>
+              <br>
+            </div>
+            <br>
+            <div id="colError" class="error hidden"></div>
+        </fieldset>
+        <br>
+        <input type="submit" value="Create Table">
+        <HR>
+        Screen Tools: (Avaliable on Desktop)
+        <button class="column_full_screen" onClick="fullScreen()">Full Screen</button>
+        <button class="column_full_screen1" onClick="fullExit()">Original Screen</button>
+
+        <HR>
+        <h2>Table will be showing here:</h2>
+
+
+    <fieldset id="tabButtons" class="hidden">
+        <legend>Bar Tools (To clean Bars)</legend>
+        <input id="DeepClean" type="button" value="Deep Clean">
+        <input id="cleanLeft" type="button" value="Clean all Left side Bars">
+        <input id="cleanRight" type="button" value="Clean all Right side Bars">
+    </fieldset>
+
+    <div id="tableTabs" class="hidden">
+        <ul></ul>
+    </div>
+   </form>
+  </body>
+</html>
